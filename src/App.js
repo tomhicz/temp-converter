@@ -19,11 +19,19 @@ function App() {
   //Handlers
   function handleChangeF(e) {
     setTempF(e.target.value);
-    setTempC(roundMaxPlaces((e.target.value - 32) / 1.8, maxAccuracy));
+    if (!isNaN(e.target.value)) {
+      setTempC(roundMaxPlaces((e.target.value - 32) / 1.8, maxAccuracy));
+    } else {
+      setTempC("");
+    }
   }
   function handleChangeC(e) {
     setTempC(e.target.value);
-    setTempF(roundMaxPlaces(e.target.value * 1.8 + 32, maxAccuracy));
+    if (!isNaN(e.target.value)) {
+      setTempF(roundMaxPlaces(e.target.value * 1.8 + 32, maxAccuracy));
+    } else {
+      setTempF("");
+    }
   }
 
   return (

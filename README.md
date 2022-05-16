@@ -1,3 +1,15 @@
+# Celsius <--> Fahrenheit Conversion App
+
+## Todo:
+
+- Consider linking state. If one temp is updated in other manner, it won't effect other state. Needed?
+- Consider Rounding
+  - Round to accuracy of input number?
+- Consider edge cases ('-' only, NaN, etc..)
+- Consider update frequency
+- UI/UX
+- [Stretch] Dark Mode
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

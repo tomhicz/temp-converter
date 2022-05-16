@@ -2,13 +2,21 @@
 
 ## Todo:
 
-- Consider linking state. If one temp is updated in other manner, it won't effect other state. Needed?
-- Consider Rounding
-  - Round to accuracy of input number?
-- Consider edge cases ('-' only, NaN, etc..)
-- Consider update frequency
-- UI/UX
-- [Stretch] Dark Mode
+[ ] Consider linking state. If one temp is updated in other manner, it won't effect other state. Needed?
+
+[x] Consider Rounding
+
+[ ] Round to accuracy of input number?
+
+[x] Consider edge cases ('-' only, NaN, etc..)
+
+[x] Consider update frequency
+
+[ ] UI/UX
+
+[ ] Tests
+
+[ ] [Stretch] Dark Mode
 
 # Getting Started with Create React App
 

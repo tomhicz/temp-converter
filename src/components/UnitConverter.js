@@ -41,7 +41,7 @@ function UnitConverter() {
             value={tempF}
             onChange={(e) => handleChangeF(e)}
             aria-label="Enter temp in Fahrenheit"
-            inputmode="decimal"
+            inputmode="numeric"
           />
           &deg;F
         </StyledInput>

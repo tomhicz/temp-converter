@@ -2,17 +2,22 @@
 
 ## Todo:
 
-[ ] Consider linking state. If one temp is updated in other manner, it won't effect other state. Needed?
+[ ] Readme
+
+[-] Consider linking state. If one temp is updated in other manner, it won't effect other state. Needed?
 
 [x] Consider Rounding
 
-[ ] Round to accuracy of input number?
+[x] Round to accuracy of input number?
 
 [x] Consider edge cases ('-' only, NaN, etc..)
 
 [x] Consider update frequency
 
 [ ] UI/UX
+
+[ ] keyboard as number?
+[ ] select all / end on click?
 
 [ ] Tests
 

@@ -34,16 +34,30 @@ function UnitConverter() {
   }
 
   return (
-    <StyledDiv>
-      F<input value={tempF} onChange={(e) => handleChangeF(e)} />
-      <br />
-      C<input value={tempC} onChange={(e) => handleChangeC(e)} />
-      <button onClick={() => setTempC(20)}>click</button>
-      <br />
-      <span>
-        {tempF}F, {tempC}C
-      </span>
-    </StyledDiv>
+    <Container>
+      <ResponsiveRow>
+        <StyledInput>
+          <input
+            value={tempF}
+            onChange={(e) => handleChangeF(e)}
+            aria-label="Enter temp in Fahrenheit"
+          />
+          &deg;F
+        </StyledInput>
+        <ResponsiveArrow></ResponsiveArrow>
+        <StyledInput>
+          <input
+            value={tempC}
+            onChange={(e) => handleChangeC(e)}
+            aria-label="Enter temp in Celsius"
+          />
+          &deg;C
+        </StyledInput>
+      </ResponsiveRow>
+      <div className="ConversionDetails">
+        {tempF}&deg;F is equal to {tempC}&deg;C
+      </div>
+    </Container>
   );
 }
 
@@ -51,6 +65,72 @@ export default UnitConverter;
 
 //Styles
 
-const StyledDiv = styled.section`
-  border: 1px solid red;
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+
+  .ConversionDetails {
+    color: slategrey;
+    margin-top: 1rem;
+  }
+`;
+
+const ResponsiveRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const ResponsiveArrow = styled.div`
+  &:after {
+    //Horizontal Double Arrow
+    content: "\\21D4";
+  }
+
+  @media (max-width: 320px) {
+    &:after {
+      //Vertical Double Arrow
+      content: "\\21D5";
+    }
+  }
+`;
+
+const StyledInput = styled.div`
+  //Target direct child input boxes
+  > input {
+    //flex-direction: column;
+    padding: 0.5rem;
+    max-width: 8rem;
+
+    //Gradient borders
+    border: double 3px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, orange, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    transition: opacity 1s;
+    opacity: 50%;
+
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  //Change the style on hover
+  > input:focus {
+    outline: none !important; //Overide black outline on focus
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, red, orange);
+    opacity: 100%;
+  }
 `;

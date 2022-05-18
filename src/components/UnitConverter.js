@@ -41,7 +41,7 @@ function UnitConverter() {
             value={tempF}
             onChange={(e) => handleChangeF(e)}
             aria-label="Enter temp in Fahrenheit"
-            inputmode="numeric"
+            inputMode="numeric"
           />
           &deg;F
         </StyledInput>
@@ -51,7 +51,7 @@ function UnitConverter() {
             value={tempC}
             onChange={(e) => handleChangeC(e)}
             aria-label="Enter temp in Celsius"
-            inputmode="numeric"
+            inputMode="numeric"
           />
           &deg;C
         </StyledInput>

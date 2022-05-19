@@ -33,6 +33,10 @@ function UnitConverter() {
     }
   }
 
+  function handleFocus(e) {
+    e.target.select();
+  }
+
   return (
     <Container>
       <ResponsiveRow>
@@ -40,6 +44,7 @@ function UnitConverter() {
           <input
             value={tempF}
             onChange={(e) => handleChangeF(e)}
+            onFocus={handleFocus}
             aria-label="Enter temp in Fahrenheit"
             inputMode="numeric"
           />
@@ -50,6 +55,7 @@ function UnitConverter() {
           <input
             value={tempC}
             onChange={(e) => handleChangeC(e)}
+            onFocus={handleFocus}
             aria-label="Enter temp in Celsius"
             inputMode="numeric"
           />

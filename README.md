@@ -44,6 +44,16 @@ The `UnitConvertor component` is _responsive_ and on very narrow screens ( < 320
 
 ---
 
+## Dark Mode
+
+As **Styled Components** was already being used for styling, the logical solution to implementing a Dark Mode was to use this library and make use of the `ThemeProvider` functionality. Dark and Light themes are stored in `theme.js` and are then toggled using a pure css button in the top right corner of the screen.
+
+Styled Components gives access to theme variables in all nested components, so these are used to set specific themed colors in the css of child components.
+
+The `createGlobalStyle` helper function is used to enable changing the background gradient on the body element.
+
+---
+
 ## Instructions
 
 ### Installation
@@ -91,5 +101,3 @@ The app has been tested on Chrome and Firefox on Windows, and on Android Tablets
 Test whether arrow glyph renders correctly on all platforms and replace with inline svg if necessary.
 
 Breaking out Input components into more generic components.
-
-Dark mode.

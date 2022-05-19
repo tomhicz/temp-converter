@@ -65,7 +65,7 @@ const Title = styled.h1`
 `;
 
 const Toggle = styled.button`
-  --size: 2.5rem;
+  --size: 2.8rem;
   border: 1px solid ${(props) => props.theme.appBg};
   outline: none;
   font-size: 2rem;
@@ -77,8 +77,8 @@ const Toggle = styled.button`
   width: var(--size);
   height: var(--size);
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 8px;
+  right: 13px;
   &:hover {
     transition: 0.5s all ease-in-out;
     border: none;

@@ -80,7 +80,7 @@ const Container = styled.section`
   text-align: center;
 
   .ConversionDetails {
-    color: slategrey;
+    color: ${(props) => props.theme.secondaryTextColor};
     margin-top: 1rem;
   }
 `;
@@ -99,6 +99,8 @@ const ResponsiveRow = styled.div`
 `;
 
 const ResponsiveArrow = styled.div`
+  color: ${(props) => props.theme.textColor};
+
   &:after {
     //Horizontal Double Arrow
     content: "\\21D4";
@@ -113,8 +115,12 @@ const ResponsiveArrow = styled.div`
 `;
 
 const StyledInput = styled.div`
+  color: ${(props) => props.theme.textColor};
+
   //Target direct child input boxes
   > input {
+    color: ${(props) => props.theme.textColor};
+
     //flex-direction: column;
     padding: 0.5rem;
     max-width: 8rem;
@@ -122,8 +128,7 @@ const StyledInput = styled.div`
     //Gradient borders
     border: double 3px transparent;
     border-radius: 6px;
-    background-image: linear-gradient(white, white),
-      linear-gradient(to right, orange, yellow);
+    background-image: ${(props) => props.theme.inputBg};
     background-origin: border-box;
     background-clip: padding-box, border-box;
 
@@ -137,8 +142,7 @@ const StyledInput = styled.div`
   //Change the style on hover
   > input:focus {
     outline: none !important; //Overide black outline on focus
-    background-image: linear-gradient(white, white),
-      linear-gradient(to right, red, orange);
+    background-image: ${(props) => props.theme.inputBgFocus};
     opacity: 100%;
   }
 `;
